@@ -8,6 +8,8 @@ Artefatos de gerenciamento do projeto (base PMBOK), mantidos diretamente neste r
 |---|---|---|---|
 | Termo de Abertura (TAP) | [TAP.md](TAP.md) | Escopo, objetivos, premissas, riscos, stakeholders e aprovações do projeto | Só com aprovação do sponsor — mudança de escopo exige revisão de cronograma e prazo |
 | Cronograma | [CRONOGRAMA.md](CRONOGRAMA.md) | 89 atividades em 11 fases, dependências (FS/SS/FF), caminho crítico e 11 marcos | Continuamente (processo 6.7 — controlar o cronograma): datas reais × planejadas, desvios e mudanças de linha de base |
+| Planejamento de sprints | [SPRINT_PLANNING.md](SPRINT_PLANNING.md) | PBIs do Notion (doc. 15) no GitHub: estimativas, dependências, cadência weekly/daily e ordem de corte | A cada refinamento e weekly (sprints, velocidade, estado real) |
+| Convenção de branches/commits | [BRANCH_COMMIT_CONVENTION.md](BRANCH_COMMIT_CONVENTION.md) | Hierarquia PBI → filho → tarefa em issues, branches, commits e PRs | Quando a convenção mudar (renomear issues abertas na weekly seguinte) |
 | EAP | [EAP.jpeg](EAP.jpeg) | Estrutura Analítica do Projeto que originou o cronograma | Quando o escopo for decomposto de forma diferente |
 
 ![EAP — Estrutura Analítica do Projeto](EAP.jpeg)
