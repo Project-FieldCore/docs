@@ -6,7 +6,7 @@ Decisões relevantes de arquitetura, stack e escopo — registradas **quando sã
 
 | ADR | Decisão | Status |
 |---|---|---|
-| — | *(nenhuma registrada ainda — ver pendências abaixo)* | — |
+| 0001 | [Reset do GitHub (boards/issues/milestones) e backlog canônico por PBI do Notion](0001-reset-github-notion-pbi.md) | aceita |
 
 ## Decisões pendentes de registro
 
