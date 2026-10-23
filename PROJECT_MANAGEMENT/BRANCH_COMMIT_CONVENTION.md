@@ -1,8 +1,8 @@
 # Convenção de branches, commits e tarefas — FieldOps
 
-Como nomear tasks (issues), branches e commits nos 5 repositórios
-(`fieldcore_backend`, `fieldcore_frontend`, `fieldcore_mobile`,
-`fieldcore_documentacao`, `fieldcore_cloud`). Mantido neste repositório;
+Como nomear tasks (issues), branches e commits nos 4 repositórios
+(`api-java`, `web-react`, `mobile-react`, `docs`). Mantido neste repositório;
+(renomeados a partir de `fieldcore_*` — ver [REPO_RENAME_GUIDE.md](REPO_RENAME_GUIDE.md)).
 mudou a convenção, mudou aqui primeiro e as issues abertas são renomeadas
 na weekly.
 
