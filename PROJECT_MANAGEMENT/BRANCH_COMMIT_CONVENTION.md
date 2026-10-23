@@ -26,6 +26,9 @@ não precisamos de barras extras para representar a árvore.
   pela árvore, não por texto no título.
 - Filho de dev único e pequeno **não gera branch de tarefa**: vira checklist
   dentro da própria issue filha.
+- **Template ao criar issue:** use *New issue* → formulários em
+  [`.github/ISSUE_TEMPLATE/`](../.github/ISSUE_TEMPLATE/) (`PBI (história)` ou
+  `Filho / tarefa`). Não copie uma issue-modelo fixa.
 
 ## 2. Branches: código numérico achatado, slug descritivo
 
@@ -57,11 +60,13 @@ Regras:
 
 - Commit: `:gitmoji: type: descrição curta no infinitivo` (padrão já usado
   nos repos — ver [CONTRIBUTING.md](../CONTRIBUTING.md)). Sem trailers de
-  co-autoria de IA.
+  co-autoria de IA. Tipos alinhados às branches: `feat`, `fix`, `docs`,
+  `chore`, `test`, `refactor`.
 - PR: título `[PBI-XXXX] <descrição>`; corpo com `Closes #<issue>` (ou
   `Part of #<pai>` para filho/tarefa), resumo e evidência conforme o DoD
   (Notion doc. 18): print/vídeo (UI), request/response (API), schema +
   verificação (dados). Docs-only não exige evidência de runtime.
+  Template de corpo: [`.github/pull_request_template.md`](../.github/pull_request_template.md).
 - PR de tarefa referencia a issue **filha**; quem fecha a pai é o último
   filho, citando todos os `Closes`.
 
