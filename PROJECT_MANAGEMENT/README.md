@@ -11,6 +11,8 @@ Artefatos de gerenciamento do projeto (base PMBOK), mantidos diretamente neste r
 | Planejamento de sprints | [SPRINT_PLANNING.md](SPRINT_PLANNING.md) | PBIs do Notion (doc. 15) no GitHub: estimativas, dependências, cadência weekly/daily e ordem de corte | A cada refinamento e weekly (sprints, velocidade, estado real) |
 | Convenção de branches/commits | [BRANCH_COMMIT_CONVENTION.md](BRANCH_COMMIT_CONVENTION.md) | Hierarquia PBI → filho → tarefa em issues, branches, commits e PRs | Quando a convenção mudar (renomear issues abertas na weekly seguinte) |
 | Convenção de CI | [CI_CONVENTION.md](CI_CONVENTION.md) | O que roda na CI de `api-java` / `web-react` / `mobile-react`, branches e como repetir local | Quando mudar o baseline de qualidade (lint/tipos/build/testes) |
+| Índice de convenções | [CONVENTIONS.md](CONVENTIONS.md) | Mapa de todas as convenções (humano + IA) | Quando criar/renomear um artefato de governança |
+| Contexto para assistentes de IA | [`../AGENTS.md`](../AGENTS.md) | Entrada agnóstica de ferramenta (Cursor, Copilot, Claude, …) | Quando mudar regras transversais — manter alinhado à tabela em `AGENTS.md` §3 |
 | Atualizar clone após rename | [REPO_RENAME_GUIDE.md](REPO_RENAME_GUIDE.md) | Como atualizar o `origin` e renomear a pasta local (`api-java`, `web-react`, `mobile-react`, `docs`) | Após o rename na org; cada pessoa com clone antigo |
 | Templates GitHub (issue/PR) | [`.github/ISSUE_TEMPLATE/`](../.github/ISSUE_TEMPLATE/) · [PR template](../.github/pull_request_template.md) | Formulários ao criar issue (PBI / filho-tarefa) e corpo padrão de PR | Quando o padrão de descrição mudar |
 | EAP | [EAP.jpeg](EAP.jpeg) | Estrutura Analítica do Projeto que originou o cronograma | Quando o escopo for decomposto de forma diferente |

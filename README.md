@@ -3,6 +3,8 @@
 > Repositório central de documentação da plataforma **FieldOps** — sistema de inspeção técnica em campo com operação offline.
 > Aqui vivem a especificação do produto (exportada do Notion) e os artefatos de gestão do projeto. O código fica nos repositórios irmãos (links abaixo).
 
+**Assistentes de IA / agentes:** comece em [`AGENTS.md`](AGENTS.md) (agnóstico de ferramenta). Índice de convenções: [`PROJECT_MANAGEMENT/CONVENTIONS.md`](PROJECT_MANAGEMENT/CONVENTIONS.md).
+
 📺 **Vídeo do projeto:** https://youtu.be/4UAVJdNgx-s
 
 ---
@@ -38,7 +40,8 @@ Quem já tinha clone com o nome antigo: [REPO_RENAME_GUIDE.md](PROJECT_MANAGEMEN
 
 ```
 docs/
-├── README.md                  # ← este arquivo (ponto de entrada)
+├── README.md                  # ← este arquivo (ponto de entrada humano)
+├── AGENTS.md                  # ponto de entrada para IAs / agentes (agnóstico)
 ├── CONTRIBUTING.md            # como escrever, nomear e aprovar mudanças na doc
 ├── GLOSSARIO.md               # termos do domínio (inspeção, snapshot, outbox…)
 ├── NOTION/                    # especificação do produto (export do Notion)
