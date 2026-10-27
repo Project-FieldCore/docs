@@ -14,7 +14,7 @@ Estas divergências já existem entre documentos e código e devem virar as prim
 
 1. **Frontend web: Angular (especificação) × Next.js (repositório atual)** — qual fica, e a especificação ([11](../NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md)/[14](../NOTION/pages/14%20-%20Interface%20Administrativa%20Web%201663130b4ab782babf8781b030596ced.md)) precisa ser atualizada.
 2. **Nome canônico: FieldOps × FieldCore** — adotado provisoriamente no [README raiz](../README.md): produto = FieldOps, organização/repos = FieldCore.
-3. **Repositório `fieldcore_cloud`** — citado no [Cronograma](../PROJECT_MANAGEMENT/CRONOGRAMA.md), ainda inexistente: criar ou remover da EAP/cronograma.
+3. ~~**Repositório `fieldcore_cloud`**~~ — **resolvido:** repositório removido; nomes padronizados em `api-java` / `web-react` / `mobile-react` / `docs` (ver [REPO_RENAME_GUIDE.md](../PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md)).
 
 ## Como registrar uma decisão
 

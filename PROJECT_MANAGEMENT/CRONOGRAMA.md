@@ -6,11 +6,12 @@
 
 O **FieldOps (FieldCore)** é uma plataforma de gestão de inspeções de campo, composta por quatro repositórios:
 
-- `fieldcore_backend` — API central (clientes, locais, equipamentos, técnicos, modelos de inspeção, inspeções, não conformidades);
-- `fieldcore_cloud` — infraestrutura, armazenamento e pipelines;
-- `fieldcore_frontend` — painel web administrativo/supervisor (Next.js);
-- `fieldcore_mobile` — aplicativo do técnico de campo (execução de checklists, leitura de QR Code, evidências, offline);
-- `fieldcore_documentacao` — este repositório, com a documentação do projeto.
+- `api-java` — API central (clientes, locais, equipamentos, técnicos, modelos de inspeção, inspeções, não conformidades);
+- `web-react` — painel web administrativo/supervisor (Next.js);
+- `mobile-react` — aplicativo do técnico de campo (execução de checklists, leitura de QR Code, evidências, offline);
+- `docs` — este repositório, com a documentação do projeto.
+
+> Nomes antigos (`fieldcore_*`) e remoção de `fieldcore_cloud`: ver [REPO_RENAME_GUIDE.md](REPO_RENAME_GUIDE.md).
 
 O cronograma abaixo foi elaborado a partir da EAP (Estrutura Analítica do Projeto) do FieldOps, considerando o modelo de domínio já mapeado no código (Cliente, Local, Equipamento, Técnico, Modelo de Inspeção, Inspeção, Não Conformidade) e as referências a documentos de Casos de Uso, Regras de Negócio e Funcionalidades citadas no projeto.
 
@@ -29,7 +30,7 @@ O cronograma abaixo foi elaborado a partir da EAP (Estrutura Analítica do Proje
   - **SF** (Início → Término) não foi utilizada por ser um tipo raro na prática — mantida apenas como referência conceitual.
 - **Como o prazo de ~14 semanas (71 dias úteis) foi viabilizado — estratégia de compressão:**
   1. **Trilhas paralelas de desenvolvimento.** Backend (Fase 4), Frontend Web (Fase 5) e Mobile (Fase 6) são conduzidos por equipes/pessoas distintas **ao mesmo tempo**, logo após a Fase 3 (infraestrutura base), em vez de sequencialmente.
-  2. **Front-end e mobile evoluem contra dados mockados primeiro** — mesma estratégia já usada hoje no `fieldcore_frontend` (arquivo `mock-data.ts`). Isso permite que as equipes de Web e Mobile avancem em paralelo ao Backend, sem esperar a API real ficar pronta; a integração com a API real do backend só ocorre na **Fase 7 (Integração)**.
+  2. **Front-end e mobile evoluem contra dados mockados primeiro** — mesma estratégia já usada hoje no `web-react` (arquivo `mock-data.ts`). Isso permite que as equipes de Web e Mobile avancem em paralelo ao Backend, sem esperar a API real ficar pronta; a integração com a API real do backend só ocorre na **Fase 7 (Integração)**.
   3. **Fases de curta duração no início** (Iniciação e parte da Documentação de Requisitos), já que boa parte do levantamento de casos de uso, regras de negócio e funcionalidades citadas no código já tem uma base de partida.
   4. **Plano de testes elaborado em paralelo** (item 8.1) desde a aprovação dos requisitos, e não apenas ao final do desenvolvimento.
   5. Mesmo com a compressão, o cronograma termina em **27/11/2026**, deixando apenas **1 dia útil de margem** antes do prazo final (30/11/2026). É uma folga mínima: qualquer atraso no caminho crítico (Fase 3 → 4 → 7 → 8 → 9 → 10) deve ser tratado como risco imediato ao prazo, e o ideal é a equipe já tratar **27/11/2026** como a data-limite real, reservando os últimos dias antes de 30/11 como contingência.

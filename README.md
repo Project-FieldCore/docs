@@ -23,20 +23,21 @@ Visão completa: [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%20
 
 | Componente | Stack | Repositório |
 |---|---|---|
-| API REST | Java + Spring Boot + PostgreSQL | [fieldcore_backend](https://github.com/Project-FieldCore/fieldcore_backend) |
-| Interface administrativa web | Angular + TypeScript *(ver nota)* | [fieldcore_frontend](https://github.com/Project-FieldCore/fieldcore_frontend) |
-| Aplicativo mobile | Expo + React Native + SQLite | [fieldcore_mobile](https://github.com/Project-FieldCore/fieldcore_mobile) |
-| Documentação | Markdown | [fieldcore_documentacao](https://github.com/Project-FieldCore/fieldcore_documentacao) — *você está aqui* |
+| API REST | Java + Spring Boot + PostgreSQL | [api-java](https://github.com/Project-FieldCore/api-java) |
+| Interface administrativa web | Angular + TypeScript *(ver nota)* | [web-react](https://github.com/Project-FieldCore/web-react) |
+| Aplicativo mobile | Expo + React Native + SQLite | [mobile-react](https://github.com/Project-FieldCore/mobile-react) |
+| Documentação | Markdown | [docs](https://github.com/Project-FieldCore/docs) — *você está aqui* |
+
+Quem já tinha clone com o nome antigo: [REPO_RENAME_GUIDE.md](PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md).
 
 > ⚠️ **Divergências a resolver (não esconda, decida):**
-> 1. **Nome:** os documentos oscilam entre *FieldOps* e *FieldCore*. Convenção adotada aqui: **FieldOps é o produto**, **FieldCore é o nome da organização/repositórios** no GitHub. Se o time decidir outro padrão, ajuste este README e o [TAP](PROJECT_MANAGEMENT/TAP.md) juntos.
-> 2. **Frontend web:** a especificação ([11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md), [14 - Interface Web](NOTION/pages/14%20-%20Interface%20Administrativa%20Web%201663130b4ab782babf8781b030596ced.md)) cita **Angular**, mas o `fieldcore_frontend` atual é **Next.js**. Atualize a especificação ou registre a troca em uma decisão (ver [`DECISIONS/`](DECISIONS/README.md)).
-> 3. **`fieldcore_cloud`:** citado no [Cronograma](PROJECT_MANAGEMENT/CRONOGRAMA.md) como quinto repositório, mas ainda não existe. Criar o repo ou remover a referência.
+> 1. **Nome:** os documentos oscilam entre *FieldOps* e *FieldCore*. Convenção adotada aqui: **FieldOps é o produto**, **FieldCore é o nome da organização** no GitHub; os repositórios usam nomes curtos em inglês (`api-java`, `web-react`, `mobile-react`, `docs`).
+> 2. **Frontend web:** a especificação ([11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md), [14 - Interface Web](NOTION/pages/14%20-%20Interface%20Administrativa%20Web%201663130b4ab782babf8781b030596ced.md)) cita **Angular**, mas o `web-react` atual é **Next.js**. Atualize a especificação ou registre a troca em uma decisão (ver [`DECISIONS/`](DECISIONS/README.md)).
 
 ## Estrutura deste repositório
 
 ```
-fieldcore_documentacao/
+docs/
 ├── README.md                  # ← este arquivo (ponto de entrada)
 ├── CONTRIBUTING.md            # como escrever, nomear e aprovar mudanças na doc
 ├── GLOSSARIO.md               # termos do domínio (inspeção, snapshot, outbox…)
