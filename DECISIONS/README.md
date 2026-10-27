@@ -7,13 +7,12 @@ Decisões relevantes de arquitetura, stack e escopo — registradas **quando sã
 | ADR | Decisão | Status |
 |---|---|---|
 | 0001 | [Reset do GitHub (boards/issues/milestones) e backlog canônico por PBI do Notion](0001-reset-github-notion-pbi.md) | aceita |
+| 0002 | [Interface web em Next.js (em vez de Angular)](0002-web-nextjs-instead-of-angular.md) | aceita |
 
 ## Decisões pendentes de registro
 
-Estas divergências já existem entre documentos e código e devem virar as primeiras ADRs:
-
-1. **Frontend web: Angular (especificação) × Next.js (repositório atual)** — qual fica, e a especificação ([11](../NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md)/[14](../NOTION/pages/14%20-%20Interface%20Administrativa%20Web%201663130b4ab782babf8781b030596ced.md)) precisa ser atualizada.
-2. **Nome canônico: FieldOps × FieldCore** — adotado provisoriamente no [README raiz](../README.md): produto = FieldOps, organização/repos = FieldCore.
+1. **Nome canônico: FieldOps × FieldCore** — adotado provisoriamente no [README raiz](../README.md): produto = FieldOps, organização = FieldCore; repos com nomes curtos em inglês.
+2. ~~**Frontend web: Angular × Next.js**~~ — **resolvido** na ADR 0002 (Next.js oficial para o MVP); falta reexport/atualização das páginas Notion 11/14 e do TAP.
 3. ~~**Repositório `fieldcore_cloud`**~~ — **resolvido:** repositório removido; nomes padronizados em `api-java` / `web-react` / `mobile-react` / `docs` (ver [REPO_RENAME_GUIDE.md](../PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md)).
 
 ## Como registrar uma decisão
