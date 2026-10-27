@@ -15,6 +15,41 @@ locais.
 - Sem overengineering: sem matrix desnecessária, sem deploy neste estágio,
   sem EAS Build obrigatório no PR do mobile.
 
+## Segurança dos workflows (obrigatório)
+
+Todo `.github/workflows/*.yml` de CI nos repos de código deve:
+
+1. **Pin de Actions por SHA** — `uses: owner/action@<full-sha> # vX.Y.Z` (tag
+   só no comentário). Não usar `@v4` / `@main` sozinhos.
+2. **Least privilege** — bloco top-level explícito:
+
+   ```yaml
+   permissions:
+     contents: read
+   ```
+
+   Ampliar só se um job precisar (ex.: `pull-requests: write` para bot de
+   comentário) e documentar o motivo no PR.
+3. **Proibido `pull_request_target`** neste baseline — use `pull_request` (ou
+   `push` nas branches de integração). `pull_request_target` corre no contexto
+   da base e facilita exfiltração se o workflow fizer checkout do fork.
+4. **Sem secrets no workflow de PR** — não injetar `secrets.*` nem tokens de
+   deploy/registry nestes jobs de lint/types/build. Variáveis públicas
+   (`NEXT_PUBLIC_*` placeholder, URLs de doc) ok; credenciais ficam fora.
+
+Exemplo mínimo (web/mobile já seguem este padrão):
+
+```yaml
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [develop, main]
+permissions:
+  contents: read
+# jobs: checkout (SHA pin) → setup-node (SHA pin) → npm ci → lint → typecheck → …
+```
+
 ## Por repositório
 
 | Repo | Branch base | Trigger | O que roda na CI | Como rodar local |
