@@ -1,3 +1,9 @@
+<!--
+Título da PR (obrigatório): [PBI-XXXX] descrição
+  filho → [PBI-XXXX.N] …   tarefa → [PBI-XXXX.N.M] …
+Ver PROJECT_MANAGEMENT/BRANCH_COMMIT_CONVENTION.md §3
+-->
+
 ## Summary
 
 -

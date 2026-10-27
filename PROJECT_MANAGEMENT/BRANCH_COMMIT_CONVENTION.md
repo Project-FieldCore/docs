@@ -62,11 +62,25 @@ Regras:
   nos repos — ver [CONTRIBUTING.md](../CONTRIBUTING.md)). Sem trailers de
   co-autoria de IA. Tipos alinhados às branches: `feat`, `fix`, `docs`,
   `chore`, `test`, `refactor`.
-- PR: título `[PBI-XXXX] <descrição>`; corpo com `Closes #<issue>` (ou
-  `Part of #<pai>` para filho/tarefa), resumo e evidência conforme o DoD
-  (Notion doc. 18): print/vídeo (UI), request/response (API), schema +
-  verificação (dados). Docs-only não exige evidência de runtime.
-  Template de corpo: [`.github/pull_request_template.md`](../.github/pull_request_template.md).
+- **Título da PR (obrigatório):** começa com a tag do PBI entre colchetes,
+  para filtrar no GitHub (`is:pr [PBI-0007]`):
+
+  | Nível | Formato do título | Exemplo |
+  |---|---|---|
+  | Pai | `[PBI-XXXX] <descrição curta>` | `[PBI-0007] Login e-mail e senha na API` |
+  | Filho | `[PBI-XXXX.N] <descrição>` | `[PBI-0005.1] CI backend (build+testes)` |
+  | Tarefa | `[PBI-XXXX.N.M] <descrição>` | `[PBI-0007.1.1] Emitir access token JWT` |
+
+  - Sempre **4 dígitos** no id (`PBI-0007`, não `PBI-7`).
+  - A tag é o **primeiro** token do título; depois um espaço e a descrição
+    (sem repetir o id).
+  - PR que toca vários PBIs: use o PBI **principal** no título e cite os
+    demais no corpo (`Related to #…` / `Part of #…`).
+- Corpo da PR: `Closes #<issue>` (ou `Part of #<pai>` para filho/tarefa),
+  resumo e evidência conforme o DoD (Notion doc. 18): print/vídeo (UI),
+  request/response (API), schema + verificação (dados). Docs-only não
+  exige evidência de runtime. Template:
+  [`.github/pull_request_template.md`](../.github/pull_request_template.md).
 - PR de tarefa referencia a issue **filha**; quem fecha a pai é o último
   filho, citando todos os `Closes`.
 
