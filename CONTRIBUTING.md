@@ -1,5 +1,8 @@
 # Como contribuir com a documentação
 
+Assistentes de IA: leia [`AGENTS.md`](AGENTS.md) antes de editar. Convenções:
+[`PROJECT_MANAGEMENT/CONVENTIONS.md`](PROJECT_MANAGEMENT/CONVENTIONS.md).
+
 Este repositório guarda dois tipos de documento, com regras diferentes:
 
 | Tipo | Onde | Fonte da verdade |
