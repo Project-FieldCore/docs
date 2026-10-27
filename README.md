@@ -24,7 +24,7 @@ Visão completa: [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%20
 | Componente | Stack | Repositório |
 |---|---|---|
 | API REST | Java + Spring Boot + PostgreSQL | [api-java](https://github.com/Project-FieldCore/api-java) |
-| Interface administrativa web | Angular + TypeScript *(ver nota)* | [web-react](https://github.com/Project-FieldCore/web-react) |
+| Interface administrativa web | Next.js + TypeScript ([ADR 0002](DECISIONS/0002-web-nextjs-instead-of-angular.md)) | [web-react](https://github.com/Project-FieldCore/web-react) |
 | Aplicativo mobile | Expo + React Native + SQLite | [mobile-react](https://github.com/Project-FieldCore/mobile-react) |
 | Documentação | Markdown | [docs](https://github.com/Project-FieldCore/docs) — *você está aqui* |
 
@@ -32,7 +32,7 @@ Quem já tinha clone com o nome antigo: [REPO_RENAME_GUIDE.md](PROJECT_MANAGEMEN
 
 > ⚠️ **Divergências a resolver (não esconda, decida):**
 > 1. **Nome:** os documentos oscilam entre *FieldOps* e *FieldCore*. Convenção adotada aqui: **FieldOps é o produto**, **FieldCore é o nome da organização** no GitHub; os repositórios usam nomes curtos em inglês (`api-java`, `web-react`, `mobile-react`, `docs`).
-> 2. **Frontend web:** a especificação ([11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md), [14 - Interface Web](NOTION/pages/14%20-%20Interface%20Administrativa%20Web%201663130b4ab782babf8781b030596ced.md)) cita **Angular**, mas o `web-react` atual é **Next.js**. Atualize a especificação ou registre a troca em uma decisão (ver [`DECISIONS/`](DECISIONS/README.md)).
+> 2. **Frontend web:** stack oficial = **Next.js** ([ADR 0002](DECISIONS/0002-web-nextjs-instead-of-angular.md)). As páginas Notion 11/14 ainda citam Angular até o próximo reexport.
 
 ## Estrutura deste repositório
 
