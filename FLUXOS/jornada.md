@@ -1,7 +1,7 @@
 # Jornada entre os papéis
 
 Como uma inspeção atravessa administrador, supervisor e técnico com o que está entregue até o PBI-0040.
-Corte: 05/11/2026. Atualizar quando um PBI mudar estado, canal ou ator.
+Corte: 05/11/2026, até o PBI-0050. Atualizar quando um PBI mudar estado, canal ou ator.
 
 O equipamento escolhido no agendamento fica registrado na tela. A API de agendamento ainda não recebe `equipmentId` (PBI-0026).
 

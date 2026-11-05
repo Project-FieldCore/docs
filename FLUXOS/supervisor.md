@@ -1,7 +1,7 @@
 # Supervisor
 
 Marina padroniza o checklist, agenda o trabalho do técnico e acompanha o que já foi atribuído ou concluído.
-Corte: 05/11/2026. Papel `SUPERVISOR`. Canal: web. O `ADMIN` percorre os mesmos passos, menos a restrição de não gerenciar usuários — isso é do administrador.
+Corte: 05/11/2026, até o PBI-0050. Papel `SUPERVISOR`. Canal: web. O `ADMIN` percorre os mesmos passos, menos a restrição de não gerenciar usuários — isso é do administrador.
 
 ```mermaid
 flowchart TD
@@ -52,13 +52,15 @@ Trocar o técnico depois do agendamento usa `PATCH /inspections/{id}/assignee`, 
 
 ## UC-15 — Acompanhar e cancelar
 
-Disponível (PBI-0029, 0030).
+Disponível (PBI-0029, 0030, 0047). No detalhe, o acompanhamento lista as fotos e as não conformidades já gravadas na API.
 
 ```mermaid
 flowchart TD
   abre[Abre Inspecoes] --> api[GET /inspections paginado]
   api --> filtros[Filtra estado, periodo, tecnico e cliente]
   filtros --> detalhe[Abre a inspeção]
+  detalhe --> campo[GET /inspections/{id}/monitoring]
+  campo --> galeria[Lista fotos e nao conformidades sincronizadas]
   detalhe --> pode{Aprovada ou ja cancelada?}
   pode -->|Sim| semBotao[Nao oferece o cancelamento comum]
   pode -->|Nao| motivo[Pede justificativa obrigatoria]
@@ -69,7 +71,7 @@ flowchart TD
 
 | Caso | Por quê | PBI |
 |---|---|---|
-| UC-16 Revisar respostas, evidências e não conformidades | A tela de revisão no web ainda não fala com a API | 0056–0058 |
+| UC-16 Revisar respostas e decidir | A galeria já mostra foto e não conformidade. Aprovar, reprovar e ampliar ainda não falam com a API | 0056–0058 |
 | UC-17 Aprovar ou reprovar | Mesma lacuna. Inspeção aprovada já não cancela pelo fluxo comum | 0059–0061 |
 | UC-18 Histórico e UC-19 Indicadores | Não entregues | 0063, 0073 |
-| Equipamento dentro da inspeção na API | O seletor bloqueia incompatível, mas o `POST /inspections` não persiste o equipamento | 0026, segue em 0041 |
+| Equipamento no agendamento | O `POST /inspections` ainda não grava o equipamento. O técnico pode vinculá-lo depois, pelo QR do ativo do mesmo local | 0041 |
