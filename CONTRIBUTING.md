@@ -9,6 +9,7 @@ Este repositório guarda dois tipos de documento, com regras diferentes:
 |---|---|---|
 | Especificação do produto | `NOTION/pages/` | **Notion** — este repo é um snapshot exportado |
 | Gestão e governança | `PROJECT_MANAGEMENT/`, `DECISIONS/`, raiz | **Este repositório** |
+| Uso real por papel | `FLUXOS/` | **Este repositório** — evolui a cada PBI que muda tela, endpoint ou estado |
 
 ## Regras por área
 
@@ -28,6 +29,7 @@ Este repositório guarda dois tipos de documento, com regras diferentes:
 2. Nome de arquivo em maiúsculas para artefatos de gestão (`TAP.md`, `CRONOGRAMA.md`) e descritivo para os demais.
 3. Comece com `# Título` + 1–2 linhas dizendo **o que é, para quem e quando atualizar** — quem abre o arquivo decide em 10 segundos se é o que procura.
 4. Linke a partir do índice da pasta (`README.md` local) e, se for relevante, do [`README.md`](README.md) raiz. Documento sem link de entrada é documento perdido.
+5. Fluxo de uso por papel vai em [`FLUXOS/`](FLUXOS/README.md). Ao entregar um PBI, atualize a situação e o diagrama do caso de uso — não reescreva a especificação em `NOTION/`.
 
 ## Fluxo de trabalho (Git)
 

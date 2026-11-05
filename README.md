@@ -44,6 +44,8 @@ docs/
 ├── AGENTS.md                  # ponto de entrada para IAs / agentes (agnóstico)
 ├── CONTRIBUTING.md            # como escrever, nomear e aprovar mudanças na doc
 ├── GLOSSARIO.md               # termos do domínio (inspeção, snapshot, outbox…)
+├── FLUXOS/                    # uso real por papel e caso de uso (Mermaid; evolui com os PBIs)
+│   └── README.md              # índice, situação e como atualizar
 ├── NOTION/                    # especificação do produto (export do Notion)
 │   ├── README.md              # índice comentado das 22 páginas
 │   └── pages/                 # páginas 01–22 (não renomear — ver CONTRIBUTING)
@@ -58,27 +60,33 @@ docs/
 
 ## Índice da documentação
 
-### 1. Produto e requisitos — [`NOTION/pages/`](NOTION/README.md)
+### 1. Como cada papel usa o sistema — [`FLUXOS/`](FLUXOS/README.md)
+
+[Jornada](FLUXOS/jornada.md) · [Administrador](FLUXOS/administrador.md) · [Supervisor](FLUXOS/supervisor.md) · [Técnico](FLUXOS/tecnico.md)
+
+O que está no código até o PBI corrente. A especificação completa continua no Notion.
+
+### 2. Produto e requisitos — [`NOTION/pages/`](NOTION/README.md)
 
 Visão geral · Objetivos · Problema · Personas · Perfis de usuário · Casos de uso · Fluxo geral · Funcionalidades · Regras de negócio
 
-### 2. Arquitetura e dados
+### 3. Arquitetura e dados
 
 [10 - Modelo de Dados](NOTION/pages/10%20-%20Modelo%20de%20Dados%20eb43130b4ab7824f85b881c97289b28f.md) · [11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md) · [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md)
 
-### 3. Aplicações
+### 4. Aplicações
 
 [13 - Aplicativo Mobile](NOTION/pages/13%20-%20Aplicativo%20Mobile%20ac83130b4ab783f9a98781d7b86ce1d7.md) · [14 - Interface Administrativa Web](NOTION/pages/14%20-%20Interface%20Administrativa%20Web%201663130b4ab782babf8781b030596ced.md)
 
-### 4. Planejamento e qualidade
+### 5. Planejamento e qualidade
 
 [15 - Backlog](NOTION/pages/15%20-%20Backlog%20do%20Produto%20add3130b4ab783848042818065d5e111.md) · [16 - Roadmap](NOTION/pages/16%20-%20Roadmap%2030f3130b4ab783af82b781172c6cb245.md) · [17 - Critérios de Aceitação](NOTION/pages/17%20-%20Crit%C3%A9rios%20de%20Aceita%C3%A7%C3%A3o%208a43130b4ab782038a7f81a1eb087644.md) · [18 - Definition of Done](NOTION/pages/18%20-%20Defini%C3%A7%C3%A3o%20de%20Pronto%20-%20Definition%20of%20Done%2027d3130b4ab7839c917f816f80bc8201.md) · [19 - Critérios de Avaliação](NOTION/pages/19%20-%20Crit%C3%A9rios%20de%20Avalia%C3%A7%C3%A3o%208983130b4ab7839089fc815b3b0f3ff9.md)
 
-### 5. Gestão do projeto — [`PROJECT_MANAGEMENT/`](PROJECT_MANAGEMENT/README.md)
+### 6. Gestão do projeto — [`PROJECT_MANAGEMENT/`](PROJECT_MANAGEMENT/README.md)
 
 [TAP — Termo de Abertura](PROJECT_MANAGEMENT/TAP.md) · [Cronograma](PROJECT_MANAGEMENT/CRONOGRAMA.md) · [EAP](PROJECT_MANAGEMENT/EAP.jpeg)
 
-### 6. Anexos
+### 7. Anexos
 
 Checklist executivo · Decisões de escopo · Exemplo de ficha de inspeção · Diagrama de classes — ver índice completo em [`NOTION/README.md`](NOTION/README.md).
 
@@ -86,7 +94,7 @@ Checklist executivo · Decisões de escopo · Exemplo de ficha de inspeção · 
 
 | Se você é… | Comece por |
 |---|---|
-| Novo no projeto | [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%2020e3130b4ab782b393d481b43725c522.md) → [07 - Fluxo Geral](NOTION/pages/07%20-%20Fluxo%20Geral%209ea3130b4ab782e88b55016ed5e2fa12.md) → [GLOSSARIO.md](GLOSSARIO.md) |
+| Novo no projeto | [FLUXOS](FLUXOS/README.md) (o que cada papel faz hoje) → [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%2020e3130b4ab782b393d481b43725c522.md) → [GLOSSARIO.md](GLOSSARIO.md) |
 | Desenvolvedor(a) | [11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md) → [10 - Modelo de Dados](NOTION/pages/10%20-%20Modelo%20de%20Dados%20eb43130b4ab7824f85b881c97289b28f.md) → [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md) → README do seu repositório |
 | Gestão / acompanhamento | [PROJECT_MANAGEMENT/](PROJECT_MANAGEMENT/README.md) (TAP, cronograma e marcos) |
 | Avaliador(a) | [19 - Critérios de Avaliação](NOTION/pages/19%20-%20Crit%C3%A9rios%20de%20Avalia%C3%A7%C3%A3o%208983130b4ab7839089fc815b3b0f3ff9.md) → [16 - Roadmap](NOTION/pages/16%20-%20Roadmap%2030f3130b4ab783af82b781172c6cb245.md) → este README |
