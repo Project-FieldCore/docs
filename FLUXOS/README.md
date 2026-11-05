@@ -32,7 +32,7 @@ Situação:
 
 `ADMIN` e `SUPERVISOR` compartilham o painel. Gestão de usuários é só do administrador. Agendar, publicar modelo e acompanhar inspeção a API aceita dos dois.
 
-## Corte: 05/11/2026 — PBIs 0001 a 0040
+## Corte: 05/11/2026 — PBIs 0001 a 0050
 
 | Caso de uso | Papel | Canal | Situação | PBIs | Fluxo |
 |---|---|---|---|---|---|
@@ -41,15 +41,15 @@ Situação:
 | UC-03 Clientes, locais, equipamentos | Administrador e supervisor | Web | Disponível | 0013–0017 | [Administrador](administrador.md) |
 | UC-04 / UC-05 Modelo e publicação | Administrador e supervisor | Web | Disponível | 0018–0023 | [Supervisor](supervisor.md) |
 | UC-06 Agendar e atribuir | Administrador e supervisor | Web | Disponível | 0024–0028 | [Supervisor](supervisor.md) |
-| UC-15 Acompanhar | Administrador e supervisor | Web | Disponível | 0029, 0030 | [Supervisor](supervisor.md) |
+| UC-15 Acompanhar | Administrador e supervisor | Web | Disponível | 0029, 0030, 0047 | [Supervisor](supervisor.md) |
 | UC-07 Baixar atribuídas | Técnico | Mobile | Disponível | 0031 | [Técnico](tecnico.md) |
 | UC-09 Iniciar | Técnico | Mobile | Disponível | 0033, 0034 | [Técnico](tecnico.md) |
 | UC-10 Responder checklist | Técnico | Mobile | Disponível | 0035–0039 | [Técnico](tecnico.md) |
-| UC-13 Concluir | Técnico | Mobile | Parcial | 0040 | [Técnico](tecnico.md) |
-| UC-08 QR Code | Técnico | Mobile | Previsto | 0041 | [Técnico](tecnico.md) |
-| UC-11 Evidência | Técnico | Mobile | Previsto | 0042–0044 | [Técnico](tecnico.md) |
-| UC-12 Não conformidade | Técnico | Mobile | Previsto | 0046 | [Técnico](tecnico.md) |
-| UC-14 Sincronizar | Técnico | Mobile e API | Previsto | 0048–0055 | [Técnico](tecnico.md) |
+| UC-13 Concluir | Técnico | Mobile | Disponível | 0040, 0043, 0045 | [Técnico](tecnico.md) |
+| UC-08 QR Code | Técnico | Mobile | Disponível | 0041 | [Técnico](tecnico.md) |
+| UC-11 Evidência | Técnico | Mobile | Disponível | 0042–0044 | [Técnico](tecnico.md) |
+| UC-12 Não conformidade | Técnico | Mobile | Disponível | 0046 | [Técnico](tecnico.md) |
+| UC-14 Sincronizar | Técnico | Mobile e API | Parcial | 0048–0050 | [Técnico](tecnico.md) |
 | UC-16 / UC-17 Revisão e decisão | Supervisor | Web | Previsto | 0056–0061 | [Supervisor](supervisor.md) |
 | UC-18 / UC-19 Histórico e indicadores | Supervisor | Web | Previsto | 0063, 0073 | [Supervisor](supervisor.md) |
 
