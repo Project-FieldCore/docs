@@ -90,6 +90,51 @@ Visão geral · Objetivos · Problema · Personas · Perfis de usuário · Casos
 
 Checklist executivo · Decisões de escopo · Exemplo de ficha de inspeção · Diagrama de classes — ver índice completo em [`NOTION/README.md`](NOTION/README.md).
 
+## Consultar OpenAPI e diagramas principais
+
+Para quem avalia a entrega (AC-RELEASE): onde ver o contrato da API e onde estão os diagramas.
+
+### OpenAPI (Swagger UI e `/v3/api-docs`)
+
+Swagger UI e o JSON do OpenAPI são públicos (sem token); as rotas protegidas pedem login (`POST /api/v1/auth/login`, depois **Authorize** com o `accessToken`).
+
+| Onde | Swagger UI | OpenAPI (JSON) |
+|---|---|---|
+| Local (`./mvnw spring-boot:run`) | http://localhost:8080/swagger-ui.html | http://localhost:8080/v3/api-docs |
+| Container | porta publicada (padrão 8080): `/swagger-ui.html` | `/v3/api-docs` — passo a passo no [README do api-java](https://github.com/Project-FieldCore/api-java#readme) (Dockerfile/compose do PBI-0070, [PR #215](https://github.com/Project-FieldCore/api-java/pull/215), ainda não mergeado) |
+| DEV (EC2) | http://34.196.177.92/swagger-ui.html | http://34.196.177.92/v3/api-docs |
+
+> O IP do DEV pode mudar no Learner Lab; confirme o endereço atual com a equipe (Environment `development` do api-java).
+
+Contrato versionado: [`openapi/fieldops-v1.yaml`](https://github.com/Project-FieldCore/api-java/blob/develop/openapi/fieldops-v1.yaml) (repo api-java, branch `develop`). Erros usam o formato padronizado da [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md): `timestamp`, `status`, `code`, `message`, `path`, `requestId`, `fieldErrors`.
+
+### Diagramas principais
+
+| Diagrama | Onde | Formato | Observação |
+|---|---|---|---|
+| Classes do domínio | [22 Anexo D - Diagrama de Classe](NOTION/pages/22%20Anexo%20D%20-%20Diagrama%20de%20Classe%203c63130b4ab782fe962c018b0adf27b3.md) ([imagem](NOTION/pages/22%20Anexo%20D%20-%20Diagrama%20de%20Classe/image.png)) | Imagem (PlantUML exportado) | Sem fonte editável no repo |
+| Modelo de dados | [10 - Modelo de Dados](NOTION/pages/10%20-%20Modelo%20de%20Dados%20eb43130b4ab7824f85b881c97289b28f.md) (seção 10.3) | Texto/ASCII | Sem diagrama gráfico (ER) |
+| Fluxos por papel | [FLUXOS](FLUXOS/README.md) · [jornada](FLUXOS/jornada.md) · [técnico](FLUXOS/tecnico.md) · [supervisor](FLUXOS/supervisor.md) · [administrador](FLUXOS/administrador.md) | Mermaid | Corte 05/11/2026 (até o PBI-0050) |
+| Arquitetura | [11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md) | Texto | Sem diagrama visual; ainda cita Angular (ver divergência acima) |
+| API REST | [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md) | Texto | O contrato executável é o OpenAPI acima |
+
+A descrição do Swagger UI do api-java também lista esses links ([PR #217](https://github.com/Project-FieldCore/api-java/pull/217), PBI-0071.1).
+
+**Pendências (diagramas ainda parciais):**
+
+- Diagrama de classes só existe como imagem; falta a fonte editável (CONTRIBUTING pede PlantUML/Mermaid ao lado da imagem).
+- O diagrama de classes diverge do código: `UserRole` usa `ADMIN/MANAGER/INSPECTOR/REVIEWER`, enquanto a API usa `ADMIN/SUPERVISOR/TECHNICIAN/CLIENT_VIEWER`; e o diagrama prevê `EquipmentType`, que não existe nas migrations. Corrigir na fonte (Notion) e reexportar.
+- Não há diagrama gráfico do modelo de dados (ER) nem de arquitetura (componentes/implantação).
+- Os fluxos estão com corte em 05/11/2026; atualizar conforme [`FLUXOS/README.md`](FLUXOS/README.md#como-evoluir).
+
+### Como avaliar em 5 passos
+
+1. Abra o **Swagger UI** (local, container ou DEV — tabela acima) e confirme que carrega sem token.
+2. Abra `/v3/api-docs` e confira `info` (título **FieldOps API**, versão) e a lista de rotas; compare com o contrato versionado `fieldops-v1.yaml`.
+3. Faça login em `POST /api/v1/auth/login`. Usuários de demonstração existem só no profile `dev` (local/container de demo): veja `docs/DEMO_SEED.md` no [api-java](https://github.com/Project-FieldCore/api-java). Use **Authorize** com o `accessToken` e chame uma rota protegida (ex.: `GET /api/v1/inspections`).
+4. Provoque um erro (senha errada → `401 INVALID_CREDENTIALS`; sem token → `401`) e confira o corpo padronizado (`code`, `message`, `requestId`, `fieldErrors`).
+5. Percorra os diagramas na ordem: **classes (22) → modelo de dados (10) → fluxos por papel ([FLUXOS](FLUXOS/README.md))** e registre divergências em relação ao código.
+
 ## Por onde começar
 
 | Se você é… | Comece por |
@@ -97,7 +142,7 @@ Checklist executivo · Decisões de escopo · Exemplo de ficha de inspeção · 
 | Novo no projeto | [FLUXOS](FLUXOS/README.md) (o que cada papel faz hoje) → [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%2020e3130b4ab782b393d481b43725c522.md) → [GLOSSARIO.md](GLOSSARIO.md) |
 | Desenvolvedor(a) | [11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md) → [10 - Modelo de Dados](NOTION/pages/10%20-%20Modelo%20de%20Dados%20eb43130b4ab7824f85b881c97289b28f.md) → [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md) → README do seu repositório |
 | Gestão / acompanhamento | [PROJECT_MANAGEMENT/](PROJECT_MANAGEMENT/README.md) (TAP, cronograma e marcos) |
-| Avaliador(a) | [19 - Critérios de Avaliação](NOTION/pages/19%20-%20Crit%C3%A9rios%20de%20Avalia%C3%A7%C3%A3o%208983130b4ab7839089fc815b3b0f3ff9.md) → [16 - Roadmap](NOTION/pages/16%20-%20Roadmap%2030f3130b4ab783af82b781172c6cb245.md) → este README |
+| Avaliador(a) | [Consultar OpenAPI e diagramas](#consultar-openapi-e-diagramas-principais) → [19 - Critérios de Avaliação](NOTION/pages/19%20-%20Crit%C3%A9rios%20de%20Avalia%C3%A7%C3%A3o%208983130b4ab7839089fc815b3b0f3ff9.md) → [16 - Roadmap](NOTION/pages/16%20-%20Roadmap%2030f3130b4ab783af82b781172c6cb245.md) → este README |
 
 ## Marcos (resumo)
 
