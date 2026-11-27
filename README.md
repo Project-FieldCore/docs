@@ -101,7 +101,7 @@ Swagger UI e o JSON do OpenAPI são públicos (sem token); as rotas protegidas p
 | Onde | Swagger UI | OpenAPI (JSON) |
 |---|---|---|
 | Local (`./mvnw spring-boot:run`) | http://localhost:8080/swagger-ui.html | http://localhost:8080/v3/api-docs |
-| Container | porta publicada (padrão 8080): `/swagger-ui.html` | `/v3/api-docs` — passo a passo no [README do api-java](https://github.com/Project-FieldCore/api-java#readme) (Dockerfile/compose do PBI-0070, [PR #215](https://github.com/Project-FieldCore/api-java/pull/215), ainda não mergeado) |
+| Container (Docker Compose) | porta publicada (padrão 8080): `/swagger-ui.html` | `/v3/api-docs` — build/run em [`DEPLOY_CONTAINER.md`](https://github.com/Project-FieldCore/api-java/blob/develop/docs/DEPLOY_CONTAINER.md); URLs e diagramas também na seção [Consultar OpenAPI e diagramas](https://github.com/Project-FieldCore/api-java/blob/develop/README.md#consultar-openapi-e-diagramas) do README do api-java |
 | DEV (EC2) | http://34.196.177.92/swagger-ui.html | http://34.196.177.92/v3/api-docs |
 
 > O IP do DEV pode mudar no Learner Lab; confirme o endereço atual com a equipe (Environment `development` do api-java).
@@ -118,7 +118,7 @@ Contrato versionado: [`openapi/fieldops-v1.yaml`](https://github.com/Project-Fie
 | Arquitetura | [11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md) | Texto | Sem diagrama visual; ainda cita Angular (ver divergência acima) |
 | API REST | [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md) | Texto | O contrato executável é o OpenAPI acima |
 
-A descrição do Swagger UI do api-java também lista esses links ([PR #217](https://github.com/Project-FieldCore/api-java/pull/217), PBI-0071.1).
+A descrição do Swagger UI do api-java (PBI-0071.1) também lista esses links.
 
 **Pendências (diagramas ainda parciais):**
 
@@ -131,7 +131,7 @@ A descrição do Swagger UI do api-java também lista esses links ([PR #217](htt
 
 1. Abra o **Swagger UI** (local, container ou DEV — tabela acima) e confirme que carrega sem token.
 2. Abra `/v3/api-docs` e confira `info` (título **FieldOps API**, versão) e a lista de rotas; compare com o contrato versionado `fieldops-v1.yaml`.
-3. Faça login em `POST /api/v1/auth/login`. Usuários de demonstração existem só no profile `dev` (local/container de demo): veja `docs/DEMO_SEED.md` no [api-java](https://github.com/Project-FieldCore/api-java). Use **Authorize** com o `accessToken` e chame uma rota protegida (ex.: `GET /api/v1/inspections`).
+3. Faça login em `POST /api/v1/auth/login`. Use o usuário **de demonstração** `admin@fieldcore.com` / `DemoPass123!` (válido no DEV, no container de demo e local; lista completa em [`DEMO_SEED.md`](https://github.com/Project-FieldCore/api-java/blob/develop/docs/DEMO_SEED.md)). São credenciais de demo, não segredos de produção. Use **Authorize** com o `accessToken` e chame uma rota protegida (ex.: `GET /api/v1/inspections`).
 4. Provoque um erro (senha errada → `401 INVALID_CREDENTIALS`; sem token → `401`) e confira o corpo padronizado (`code`, `message`, `requestId`, `fieldErrors`).
 5. Percorra os diagramas na ordem: **classes (22) → modelo de dados (10) → fluxos por papel ([FLUXOS](FLUXOS/README.md))** e registre divergências em relação ao código.
 
