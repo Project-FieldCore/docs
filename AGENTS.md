@@ -36,17 +36,17 @@ Board canônico: [FieldOps — Product Backlog (Notion)](https://github.com/orgs
 
 | Tema | Onde | Resumo |
 |---|---|---|
-| Issues / branches / commits / **título de PR** | [PROJECT_MANAGEMENT/BRANCH_COMMIT_CONVENTION.md](PROJECT_MANAGEMENT/BRANCH_COMMIT_CONVENTION.md) | PBI → filho → tarefa; branch `tipo/PBI-XXXX-…`; commit `:gitmoji: type: …`; PR **`[PBI-XXXX]`** / `[PBI-XXXX.N]` |
-| CI (lint, types, build, verify) | [PROJECT_MANAGEMENT/CI_CONVENTION.md](PROJECT_MANAGEMENT/CI_CONVENTION.md) | Pipeline verde no PR; actions pinadas por SHA; `permissions: contents: read`; sem `pull_request_target` / secrets |
+| Issues / branches / commits / **título de PR** | [RULES/BRANCH_COMMIT_CONVENTION.md](RULES/BRANCH_COMMIT_CONVENTION.md) | PBI → filho → tarefa; branch `tipo/PBI-XXXX-…`; commit `:gitmoji: type: …`; PR **`[PBI-XXXX]`** / `[PBI-XXXX.N]` |
+| CI (lint, types, build, verify) | [RULES/CI_CONVENTION.md](RULES/CI_CONVENTION.md) | Pipeline verde no PR; actions pinadas por SHA; `permissions: contents: read`; sem `pull_request_target` / secrets |
 | CI local por app | `api-java`/`web-react`/`mobile-react` → `docs/CI.md` | Como repetir a CI na máquina |
 | Templates de issue/PR | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) · [pull_request_template.md](.github/pull_request_template.md) | Formulários PBI / filho-tarefa; corpo de PR |
-| Rename de repos | [PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md](PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md) | Atualizar `origin` + pasta local |
-| Sprints / DoD / backlog | [SPRINT_PLANNING.md](PROJECT_MANAGEMENT/SPRINT_PLANNING.md) · Notion docs 15–18 | PBI, pontos, DoD |
+| Rename de repos | [RULES/REPO_RENAME_GUIDE.md](RULES/REPO_RENAME_GUIDE.md) | Atualizar `origin` + pasta local |
+| Sprints / DoD / backlog | [RULES/SPRINT_PLANNING.md](RULES/SPRINT_PLANNING.md) · Notion docs 15–18 | PBI, pontos, DoD |
 | Contribuir neste repo `docs` | [CONTRIBUTING.md](CONTRIBUTING.md) | Notion vs gestão; fluxo Git da doc |
 | Decisões de arquitetura | [DECISIONS/](DECISIONS/README.md) | ADR 0001 reset GitHub; ADR 0002 Next.js |
-| Índice de gestão | [PROJECT_MANAGEMENT/README.md](PROJECT_MANAGEMENT/README.md) | TAP, cronograma, EAP |
+| Gestão do projeto | [PROJECT_MANAGEMENT/](PROJECT_MANAGEMENT/) | Relatório final + artefatos 01–12 em `FILES/` (TAP, EAP, cronograma…) |
 
-Índice curto também em [PROJECT_MANAGEMENT/CONVENTIONS.md](PROJECT_MANAGEMENT/CONVENTIONS.md).
+Índice das regras em [RULES/README.md](RULES/README.md); índice curto em [RULES/CONVENTIONS.md](RULES/CONVENTIONS.md).
 
 ## 4. Regras não negociáveis (ao gerar código ou PRs)
 
@@ -99,4 +99,4 @@ mais notas locais — evita divergência.
 ---
 
 Mantenedor: time FieldOps. Mudou uma convenção? Atualize o arquivo canônico em
-`PROJECT_MANAGEMENT/` (ou ADR) **e** revise a tabela da §3 deste guia no mesmo PR.
+`RULES/` (ou ADR) **e** revise a tabela da §3 deste guia no mesmo PR.

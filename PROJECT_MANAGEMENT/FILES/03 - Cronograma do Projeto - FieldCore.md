@@ -1,19 +1,19 @@
-# Cronograma do Projeto FieldOps (FieldCore)
+# Cronograma do Projeto FieldCore
 
-> Documento produzido para a atividade da disciplina **Gestão de Projetos** (Aula 04 — Planejamento do Projeto), aplicando os processos de Gerenciamento do Tempo (6.1 a 6.7) ao Projeto FieldOps/FieldCore.
+> Documento produzido para a atividade da disciplina **Gestão de Projetos** (Aula 04 — Planejamento do Projeto), aplicando os processos de Gerenciamento do Tempo (6.1 a 6.7) ao Projeto FieldCore.
 
 ## 1. Contexto
 
-O **FieldOps (FieldCore)** é uma plataforma de gestão de inspeções de campo, composta por quatro repositórios:
+O **FieldCore** é uma plataforma de gestão de inspeções de campo, composta por quatro repositórios:
 
 - `api-java` — API central (clientes, locais, equipamentos, técnicos, modelos de inspeção, inspeções, não conformidades);
 - `web-react` — painel web administrativo/supervisor (Next.js);
 - `mobile-react` — aplicativo do técnico de campo (execução de checklists, leitura de QR Code, evidências, offline);
 - `docs` — este repositório, com a documentação do projeto.
 
-> Nomes antigos (`fieldcore_*`) e remoção de `fieldcore_cloud`: ver [REPO_RENAME_GUIDE.md](REPO_RENAME_GUIDE.md).
+> Os nomes antigos dos repositórios (`fieldcore_*`) estão documentados no guia de renomeação (`REPO_RENAME_GUIDE.md`) do repositório `docs`.
 
-O cronograma abaixo foi elaborado a partir da EAP (Estrutura Analítica do Projeto) do FieldOps, considerando o modelo de domínio já mapeado no código (Cliente, Local, Equipamento, Técnico, Modelo de Inspeção, Inspeção, Não Conformidade) e as referências a documentos de Casos de Uso, Regras de Negócio e Funcionalidades citadas no projeto.
+O cronograma abaixo foi elaborado a partir da EAP (Estrutura Analítica do Projeto) do FieldCore, considerando o modelo de domínio já mapeado no código (Cliente, Local, Equipamento, Técnico, Modelo de Inspeção, Inspeção, Não Conformidade) e as referências a documentos de Casos de Uso, Regras de Negócio e Funcionalidades citadas no projeto.
 
 **Prazo final do projeto: 30/11/2026.** Para viabilizar a entrega dentro desse prazo, o cronograma foi deliberadamente comprimido em relação a uma estimativa "confortável" — ver estratégia de compressão no item 2.
 
@@ -21,7 +21,7 @@ O cronograma abaixo foi elaborado a partir da EAP (Estrutura Analítica do Proje
 
 - **Data de início do projeto:** 24/08/2026 (segunda-feira). **Prazo final:** 30/11/2026.
 - **Duração** é contada em **dias úteis** (segunda a sexta); feriados não foram considerados individualmente — vale revisar a agenda real do time (ex.: feriados de novembro) ao adotar este cronograma como linha de base.
-- **Responsáveis** estão indicados por **papel/função** (ex.: Dev Backend, QA, PO), já que o repositório de documentação ainda não registra os nomes da equipe. Basta substituir cada papel pelo nome da pessoa correspondente quando o time estiver definido.
+- **Responsáveis** estão indicados por **papel/função** (ex.: Dev Backend, QA, PO). A correspondência entre papéis e integrantes está no documento 06 (Organograma e Matriz RACI), seção "Alocação nominal na execução".
 - Itens marcados como **Marco** têm duração zero — representam pontos de controle e não trabalho executado.
 - **Tipos de dependência** utilizados (conforme slide "Dependências entre atividades"):
   - **FS** (Término → Início): a sucessora só inicia depois que a predecessora termina — a mais comum do cronograma;
@@ -76,7 +76,7 @@ O cronograma contém **89 itens** (atividades e marcos), organizados em **11 fas
 | 3.2 | Modelar banco de dados (DER) | ARQ | 2 | 3.1 (FS) | 15/09/2026 | 16/09/2026 |  |
 | 3.3 | Definir stack tecnológica e padrões de código | ARQ | 1 | 3.1 (SS) | 11/09/2026 | 11/09/2026 |  |
 | 3.4 | Configurar repositórios GitHub (backend, cloud, frontend, mobile, documentação) | DevOps | 1 | 3.1 (SS) | 11/09/2026 | 11/09/2026 |  |
-| 3.5 | Provisionar ambiente de nuvem (fieldcore_cloud) | DevOps | 2 | 3.1 (FS) | 15/09/2026 | 16/09/2026 |  |
+| 3.5 | Provisionar ambiente de nuvem (DEV) | DevOps | 2 | 3.1 (FS) | 15/09/2026 | 16/09/2026 |  |
 | 3.6 | Configurar armazenamento de evidências fotográficas | DevOps | 1 | 3.5 (FS) | 17/09/2026 | 17/09/2026 |  |
 | 3.7 | Configurar pipeline de CI/CD | DevOps | 2 | 3.5 (SS) | 15/09/2026 | 16/09/2026 |  |
 | 3.8 | Configurar ambientes de desenvolvimento e homologação | DevOps | 1 | 3.7 (FS) | 17/09/2026 | 17/09/2026 |  |
@@ -174,7 +174,7 @@ O cronograma contém **89 itens** (atividades e marcos), organizados em **11 fas
 | 10.4 | Publicar painel web em produção | DevOps | 1 | 10.3 (SS) | 18/11/2026 | 18/11/2026 |  |
 | 10.5 | Publicar aplicativo mobile nas lojas | Dev Mobile | 2 | 10.3 (SS) | 18/11/2026 | 19/11/2026 |  |
 | 10.6 | Monitorar operação inicial (hypercare) | DevOps | 2 | 10.4 (FS); 10.5 (FS) | 20/11/2026 | 23/11/2026 |  |
-| 10.7 | **Go-live do Projeto FieldOps** | GP | 0 | 10.4 (FF); 10.5 (FF) | 19/11/2026 | 19/11/2026 | ✅ |
+| 10.7 | **Go-live do Projeto FieldCore** | GP | 0 | 10.4 (FF); 10.5 (FF) | 19/11/2026 | 19/11/2026 | ✅ |
 
 ### Fase 11 - Encerramento
 
@@ -184,7 +184,7 @@ O cronograma contém **89 itens** (atividades e marcos), organizados em **11 fas
 | 11.2 | Atualizar documentação final do projeto | AR | 1 | 10.6 (SS) | 20/11/2026 | 20/11/2026 |  |
 | 11.3 | Realizar reunião de encerramento com stakeholders | GP | 1 | 11.1 (FS); 11.2 (FS) | 25/11/2026 | 25/11/2026 |  |
 | 11.4 | Encerrar recursos e formalizar entrega | GP | 1 | 11.3 (FS) | 26/11/2026 | 26/11/2026 |  |
-| 11.5 | **Encerramento formal do Projeto FieldOps** | GP | 0 | 11.4 (FS) | 27/11/2026 | 27/11/2026 | ✅ |
+| 11.5 | **Encerramento formal do Projeto FieldCore** | GP | 0 | 11.4 (FS) | 27/11/2026 | 27/11/2026 | ✅ |
 
 ## 4. Marcos do projeto (resumo)
 
@@ -199,8 +199,8 @@ O cronograma contém **89 itens** (atividades e marcos), organizados em **11 fas
 | 7.5 | 22/10/2026 | Sistema integrado (build candidato a homologação) |
 | 8.6 | 04/11/2026 | Sistema aprovado em testes internos |
 | 9.5 | 13/11/2026 | Sistema homologado e aprovado pelo cliente |
-| 10.7 | 19/11/2026 | Go-live do Projeto FieldOps |
-| 11.5 | 27/11/2026 | Encerramento formal do Projeto FieldOps |
+| 10.7 | 19/11/2026 | Go-live do Projeto FieldCore |
+| 11.5 | 27/11/2026 | Encerramento formal do Projeto FieldCore |
 
 **Data prevista de encerramento do projeto:** 27/11/2026 — dentro do prazo final de 30/11/2026 (margem de 1 dia útil).
 
@@ -209,4 +209,4 @@ O cronograma contém **89 itens** (atividades e marcos), organizados em **11 fas
 - Este cronograma cobre o ciclo completo do PMBOK aplicado ao Gerenciamento do Tempo (6.1 a 6.7): planejamento do gerenciamento do cronograma, definição e sequenciamento das atividades, estimativa de recursos e duração, desenvolvimento e controle do cronograma.
 - As durações refletem um cenário **comprimido e otimista**, compatível com o prazo de 30/11/2026: pressupõem uma equipe dedicada em tempo integral a cada trilha (Backend, Frontend, Mobile, QA/DevOps) trabalhando simultaneamente, sem grandes bloqueios externos. Qualquer imprevisto relevante (indisponibilidade de pessoas, mudança de escopo, feriados não planejados) tende a consumir a margem de segurança de poucos dias úteis indicada acima.
 - O controle do cronograma (processo 6.7) deve ser feito continuamente, atualizando datas reais de início/término e registrando desvios e mudanças na linha de base — se algum atraso surgir, priorize proteger o caminho crítico: Fase 3 → Fase 4 (Backend) → Fase 7 (Integração) → Fase 8 (Testes) → Fase 9 (Homologação) → Fase 10 (Implantação).
-
+- A comparação entre esta linha de base e as datas realizadas (fechamento dos épicos no GitHub) está no documento 12 (Monitoramento, Controle e Encerramento).

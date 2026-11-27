@@ -1,11 +1,13 @@
 # Plano de Comunicação
 
-Define como informações do FieldOps são produzidas, compartilhadas e registradas. O GP revisa este plano a cada sprint.
+Define como informações do FieldCore são produzidas, compartilhadas e registradas. O GP revisa este plano a cada sprint.
 
 | Comunicação | Objetivo/conteúdo | Público | Responsável | Canal | Frequência | Registro |
 |---|---|---|---|---|---|---|
-| Daily | Impedimentos e plano do dia | Equipe técnica | GP/revezamento | Reunião curta | Dias úteis | Board, quando houver bloqueio |
+| Daily | Impedimentos e plano do dia | Equipe técnica | GP/revezamento | Mensagem assíncrona; reunião curta às terças e quintas | Dias úteis | Board, quando houver bloqueio |
 | Planejamento da sprint | Meta, PBIs, responsáveis e capacidade | Equipe e PO | GP e PO | Reunião + board | Início da sprint | Backlog/ata |
+| Planejamento semanal | Revisão do board, indicadores e riscos altos | Equipe | GP | Reunião + board | Segundas-feiras | Board e registro de riscos |
+| Demonstração semanal | Incremento integrado da semana | Equipe e PO | Dev do incremento | Demonstração | Sextas-feiras | Evidência no PR/issue |
 | Refinamento | Critérios de aceitação e dependências | PO, ARQ e devs | PO | Reunião | Semanal | Backlog |
 | Revisão da sprint | Entrega demonstrável e aceite | Sponsor, equipe, usuários-piloto | PO | Demonstração | Fim da sprint | Ata e evidências |
 | Retrospectiva | Melhorias de processo | Equipe | GP | Reunião | Fim da sprint | Ações no board |

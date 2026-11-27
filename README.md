@@ -3,7 +3,7 @@
 > Repositório central de documentação da plataforma **FieldOps** — sistema de inspeção técnica em campo com operação offline.
 > Aqui vivem a especificação do produto (exportada do Notion) e os artefatos de gestão do projeto. O código fica nos repositórios irmãos (links abaixo).
 
-**Assistentes de IA / agentes:** comece em [`AGENTS.md`](AGENTS.md) (agnóstico de ferramenta). Índice de convenções: [`PROJECT_MANAGEMENT/CONVENTIONS.md`](PROJECT_MANAGEMENT/CONVENTIONS.md).
+**Assistentes de IA / agentes:** comece em [`AGENTS.md`](AGENTS.md) (agnóstico de ferramenta). Índice de convenções: [`RULES/CONVENTIONS.md`](RULES/CONVENTIONS.md).
 
 📺 **Vídeo do projeto:** https://youtu.be/4UAVJdNgx-s
 
@@ -30,7 +30,7 @@ Visão completa: [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%20
 | Aplicativo mobile | Expo + React Native + SQLite | [mobile-react](https://github.com/Project-FieldCore/mobile-react) |
 | Documentação | Markdown | [docs](https://github.com/Project-FieldCore/docs) — *você está aqui* |
 
-Quem já tinha clone com o nome antigo: [REPO_RENAME_GUIDE.md](PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md).
+Quem já tinha clone com o nome antigo: [REPO_RENAME_GUIDE.md](RULES/REPO_RENAME_GUIDE.md).
 
 > ⚠️ **Divergências a resolver (não esconda, decida):**
 > 1. **Nome:** os documentos oscilam entre *FieldOps* e *FieldCore*. Convenção adotada aqui: **FieldOps é o produto**, **FieldCore é o nome da organização** no GitHub; os repositórios usam nomes curtos em inglês (`api-java`, `web-react`, `mobile-react`, `docs`).
@@ -50,10 +50,10 @@ docs/
 │   ├── README.md              # índice comentado das 22 páginas
 │   └── pages/                 # páginas 01–22 (não renomear — ver CONTRIBUTING)
 ├── PROJECT_MANAGEMENT/        # gestão do projeto (PMBOK)
-│   ├── README.md              # índice + marcos + como manter os artefatos
-│   ├── TAP.md                 # Termo de Abertura do Projeto
-│   ├── CRONOGRAMA.md          # cronograma (89 atividades, 11 fases, 11 marcos)
-│   └── EAP.jpeg               # Estrutura Analítica do Projeto (imagem)
+│   ├── Relatório Final - FieldCore.docx   # relatório final consolidado
+│   └── FILES/                 # artefatos 01–12 (TAP, EAP, cronograma, orçamento…)
+├── RULES/                     # regras: issues, branches, commits, PRs, CI, sprints
+│   └── README.md              # índice das regras
 └── DECISIONS/                 # registro de decisões de arquitetura (ADR)
     └── README.md              # índice + template
 ```
@@ -82,9 +82,9 @@ Visão geral · Objetivos · Problema · Personas · Perfis de usuário · Casos
 
 [15 - Backlog](NOTION/pages/15%20-%20Backlog%20do%20Produto%20add3130b4ab783848042818065d5e111.md) · [16 - Roadmap](NOTION/pages/16%20-%20Roadmap%2030f3130b4ab783af82b781172c6cb245.md) · [17 - Critérios de Aceitação](NOTION/pages/17%20-%20Crit%C3%A9rios%20de%20Aceita%C3%A7%C3%A3o%208a43130b4ab782038a7f81a1eb087644.md) · [18 - Definition of Done](NOTION/pages/18%20-%20Defini%C3%A7%C3%A3o%20de%20Pronto%20-%20Definition%20of%20Done%2027d3130b4ab7839c917f816f80bc8201.md) · [19 - Critérios de Avaliação](NOTION/pages/19%20-%20Crit%C3%A9rios%20de%20Avalia%C3%A7%C3%A3o%208983130b4ab7839089fc815b3b0f3ff9.md)
 
-### 6. Gestão do projeto — [`PROJECT_MANAGEMENT/`](PROJECT_MANAGEMENT/README.md)
+### 6. Gestão do projeto — [`PROJECT_MANAGEMENT/`](PROJECT_MANAGEMENT/)
 
-[TAP — Termo de Abertura](PROJECT_MANAGEMENT/TAP.md) · [Cronograma](PROJECT_MANAGEMENT/CRONOGRAMA.md) · [EAP](PROJECT_MANAGEMENT/EAP.jpeg) · [Orçamento](PROJECT_MANAGEMENT/ORCAMENTO_30_ITENS.md) · [Qualidade](PROJECT_MANAGEMENT/ANALISE_QUALIDADE_7_FERRAMENTAS.md) · [Organograma e RACI](PROJECT_MANAGEMENT/ORGANOGRAMA_RACI.md) · [Comunicação](PROJECT_MANAGEMENT/PLANO_COMUNICACAO.md) · [Riscos](PROJECT_MANAGEMENT/RISCOS.md) · [Aquisições](PROJECT_MANAGEMENT/AQUISICOES.md) · [Poder/interesse](PROJECT_MANAGEMENT/MATRIZ_PODER_INTERESSE.md)
+[Relatório final](PROJECT_MANAGEMENT/Relat%C3%B3rio%20Final%20-%20FieldCore.docx) · [TAP — Termo de Abertura](PROJECT_MANAGEMENT/FILES/01%20-%20Termo%20de%20Abertura%20de%20Projeto%20-%20FieldCore.md) · [EAP](PROJECT_MANAGEMENT/FILES/02%20-%20Estrutura%20Anal%C3%ADtica%20de%20Projeto%20-%20FieldCore.jpeg) · [Cronograma](PROJECT_MANAGEMENT/FILES/03%20-%20Cronograma%20do%20Projeto%20-%20FieldCore.md) · [Orçamento](PROJECT_MANAGEMENT/FILES/04%20-%20Or%C3%A7amento%20do%20Projeto%20-%20FieldCore.md) · [Qualidade](PROJECT_MANAGEMENT/FILES/05%20-%20An%C3%A1lise%20de%20Qualidade%20(7%20Ferramentas)%20-%20FieldCore.md) · [Organograma e RACI](PROJECT_MANAGEMENT/FILES/06%20-%20Organograma%20e%20Matriz%20RACI%20-%20FieldCore.md) · [Comunicação](PROJECT_MANAGEMENT/FILES/07%20-%20Plano%20de%20Comunica%C3%A7%C3%A3o%20-%20FieldCore.md) · [Riscos](PROJECT_MANAGEMENT/FILES/08%20-%20Registro%20e%20An%C3%A1lise%20de%20Riscos%20-%20FieldCore.md) · [Aquisições](PROJECT_MANAGEMENT/FILES/09%20-%20Tabela%20de%20Aquisi%C3%A7%C3%B5es%20-%20FieldCore.md) · [Poder/interesse](PROJECT_MANAGEMENT/FILES/10%20-%20Matriz%20de%20Poder%20e%20Interesse%20-%20FieldCore.md) · [Declaração do escopo](PROJECT_MANAGEMENT/FILES/11%20-%20Declara%C3%A7%C3%A3o%20do%20Escopo%20-%20FieldCore.md) · [Monitoramento e encerramento](PROJECT_MANAGEMENT/FILES/12%20-%20Monitoramento,%20Controle%20e%20Encerramento%20-%20FieldCore.md)
 
 ### 7. Anexos
 
@@ -141,7 +141,7 @@ A descrição do Swagger UI do api-java também lista esses links ([PR #217](htt
 |---|---|
 | Novo no projeto | [FLUXOS](FLUXOS/README.md) (o que cada papel faz hoje) → [01 - Visão Geral](NOTION/pages/01%20-%20Vis%C3%A3o%20Geral%2020e3130b4ab782b393d481b43725c522.md) → [GLOSSARIO.md](GLOSSARIO.md) |
 | Desenvolvedor(a) | [11 - Arquitetura](NOTION/pages/11%20-%20Arquitetura%202fa3130b4ab7820094b201c65aae2822.md) → [10 - Modelo de Dados](NOTION/pages/10%20-%20Modelo%20de%20Dados%20eb43130b4ab7824f85b881c97289b28f.md) → [12 - API REST](NOTION/pages/12%20-%20API%20REST%20a003130b4ab78345a637819a01fe1fc4.md) → README do seu repositório |
-| Gestão / acompanhamento | [PROJECT_MANAGEMENT/](PROJECT_MANAGEMENT/README.md) (TAP, cronograma e marcos) |
+| Gestão / acompanhamento | [PROJECT_MANAGEMENT/](PROJECT_MANAGEMENT/) (relatório final, TAP, cronograma e marcos) |
 | Avaliador(a) | [Consultar OpenAPI e diagramas](#consultar-openapi-e-diagramas-principais) → [19 - Critérios de Avaliação](NOTION/pages/19%20-%20Crit%C3%A9rios%20de%20Avalia%C3%A7%C3%A3o%208983130b4ab7839089fc815b3b0f3ff9.md) → [16 - Roadmap](NOTION/pages/16%20-%20Roadmap%2030f3130b4ab783af82b781172c6cb245.md) → este README |
 
 ## Marcos (resumo)
@@ -158,15 +158,15 @@ Prazo final: **30/11/2026** · Encerramento previsto: **27/11/2026** (margem de 
 | 10.7 | 19/11/2026 | Go-live |
 | 11.5 | 27/11/2026 | Encerramento formal |
 
-Tabela completa (11 marcos) no [Cronograma](PROJECT_MANAGEMENT/CRONOGRAMA.md#4-marcos-do-projeto-resumo).
+Tabela completa (11 marcos) no [Cronograma](PROJECT_MANAGEMENT/FILES/03%20-%20Cronograma%20do%20Projeto%20-%20FieldCore.md#4-marcos-do-projeto-resumo).
 
 ## Equipe
 
-Giovana Rafaela · Gustavo Sousa · Juliana Nascimento · Maria Eduarda · Milenna Portella — detalhes e papéis no [TAP](PROJECT_MANAGEMENT/TAP.md).
+Giovana Rafaela · Gustavo Sousa · Juliana Nascimento · Maria Eduarda · Milenna Portella — detalhes e papéis no [TAP](PROJECT_MANAGEMENT/FILES/01%20-%20Termo%20de%20Abertura%20de%20Projeto%20-%20FieldCore.md).
 
 ## Como manter esta documentação
 
 - **Fonte da especificação:** as páginas em `NOTION/pages/` foram exportadas do Notion. Ao reexportar, substitua os arquivos e atualize [`NOTION/README.md`](NOTION/README.md) — não edite correções só no export, ou elas serão perdidas na próxima exportação. Corrija na fonte (Notion) ou migre a página para cá de forma definitiva e registre a decisão.
-- **Gestão do projeto:** `PROJECT_MANAGEMENT/` é mantido direto neste repositório.
+- **Gestão do projeto e regras:** `PROJECT_MANAGEMENT/` e `RULES/` são mantidos direto neste repositório.
 - Regras de nomeação, branches, commits e revisão: [`CONTRIBUTING.md`](CONTRIBUTING.md).
 - Decisões relevantes (troca de stack, mudança de escopo, contrato de API): registe em [`DECISIONS/`](DECISIONS/README.md) antes de sair alterando vários documentos.

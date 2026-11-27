@@ -1,4 +1,4 @@
-# Termo de Abertura de Projeto — Field Core
+# Termo de Abertura de Projeto — FieldCore
 
 **Desenvolvimento e implantação da plataforma FieldCore — Sistema de Inspeção Técnica em Campo**
 
@@ -88,7 +88,7 @@ Professores responsáveis pelas disciplinas de Expo, Spring Boot e Interface Web
 
 ## Gerente do Projeto
 
-A definir pela equipe (revezamento por sprint) — integrantes:
+Exercida em revezamento por sprint entre os integrantes da equipe:
 
 - Giovana Rafaela
 - Gustavo Sousa
