@@ -5,7 +5,7 @@ backlog PBI-001…082 (doc. 15), roadmap de 8 sprints × 2 semanas (doc. 16),
 critérios de aceitação (doc. 17) e DoD (doc. 18). Este arquivo não cria um
 planejamento paralelo: ele operacionaliza o do Notion no GitHub e registra
 o estado real. Estamos atrasados em relação ao cronograma
-([CRONOGRAMA.md](CRONOGRAMA.md)); a resposta é avançar sobre o que está
+([03 - Cronograma do Projeto](../PROJECT_MANAGEMENT/FILES/03%20-%20Cronograma%20do%20Projeto%20-%20FieldCore.md)); a resposta é avançar sobre o que está
 atrasado **sem mudar a estrutura ideal** — mesmos épicos, mesma ordem de
 dependência, mesma ordem de corte de escopo (doc. 16 §16.7).
 

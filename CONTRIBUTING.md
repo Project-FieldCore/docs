@@ -1,14 +1,14 @@
 # Como contribuir com a documentação
 
 Assistentes de IA: leia [`AGENTS.md`](AGENTS.md) antes de editar. Convenções:
-[`PROJECT_MANAGEMENT/CONVENTIONS.md`](PROJECT_MANAGEMENT/CONVENTIONS.md).
+[`RULES/CONVENTIONS.md`](RULES/CONVENTIONS.md).
 
 Este repositório guarda dois tipos de documento, com regras diferentes:
 
 | Tipo | Onde | Fonte da verdade |
 |---|---|---|
 | Especificação do produto | `NOTION/pages/` | **Notion** — este repo é um snapshot exportado |
-| Gestão e governança | `PROJECT_MANAGEMENT/`, `DECISIONS/`, raiz | **Este repositório** |
+| Gestão e governança | `PROJECT_MANAGEMENT/`, `RULES/`, `DECISIONS/`, raiz | **Este repositório** |
 | Uso real por papel | `FLUXOS/` | **Este repositório** — evolui a cada PBI que muda tela, endpoint ou estado |
 
 ## Regras por área
@@ -18,15 +18,15 @@ Este repositório guarda dois tipos de documento, com regras diferentes:
 - Não corrija conteúdo só aqui: corrija no Notion e reexporte, senão a correção é sobrescrita.
 - Reexportou? Atualize a tabela de índice em [`NOTION/README.md`](NOTION/README.md) no mesmo commit.
 
-### `PROJECT_MANAGEMENT/` e demais arquivos
+### `PROJECT_MANAGEMENT/`, `RULES/` e demais arquivos
 - Escritos e mantidos direto aqui, em Markdown.
 - Datas em `dd/mm/aaaa`; prazos em dias úteis; responsáveis por papel (GP, PO, ARQ, Dev…) ou nome — seja consistente dentro do documento.
-- Imagens (ex.: `EAP.jpeg`) devem vir acompanhadas da **fonte editável** quando existir (Mermaid/draw.io/planilha) na mesma pasta.
+- Imagens (ex.: a EAP em `PROJECT_MANAGEMENT/FILES/`) devem vir acompanhadas da **fonte editável** quando existir (Mermaid/draw.io/planilha) na mesma pasta.
 
 ## Escrevendo um documento novo
 
-1. Escolha a pasta certa: gestão → `PROJECT_MANAGEMENT/`; decisão → `DECISIONS/`; termo de domínio → [`GLOSSARIO.md`](GLOSSARIO.md); o resto da especificação nasce no Notion.
-2. Nome de arquivo em maiúsculas para artefatos de gestão (`TAP.md`, `CRONOGRAMA.md`) e descritivo para os demais.
+1. Escolha a pasta certa: gestão → `PROJECT_MANAGEMENT/FILES/`; regra de trabalho → `RULES/`; decisão → `DECISIONS/`; termo de domínio → [`GLOSSARIO.md`](GLOSSARIO.md); o resto da especificação nasce no Notion.
+2. Nome de arquivo: artefatos de gestão seguem `NN - Nome do Artefato - FieldCore.md` (ex.: `03 - Cronograma do Projeto - FieldCore.md`); regras em maiúsculas (`CI_CONVENTION.md`); descritivo para os demais.
 3. Comece com `# Título` + 1–2 linhas dizendo **o que é, para quem e quando atualizar** — quem abre o arquivo decide em 10 segundos se é o que procura.
 4. Linke a partir do índice da pasta (`README.md` local) e, se for relevante, do [`README.md`](README.md) raiz. Documento sem link de entrada é documento perdido.
 5. Fluxo de uso por papel vai em [`FLUXOS/`](FLUXOS/README.md). Ao entregar um PBI, atualize a situação e o diagrama do caso de uso — não reescreva a especificação em `NOTION/`.
