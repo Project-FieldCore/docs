@@ -16,6 +16,13 @@ Artefatos de gerenciamento do projeto (base PMBOK), mantidos diretamente neste r
 | Atualizar clone após rename | [REPO_RENAME_GUIDE.md](REPO_RENAME_GUIDE.md) | Como atualizar o `origin` e renomear a pasta local (`api-java`, `web-react`, `mobile-react`, `docs`) | Após o rename na org; cada pessoa com clone antigo |
 | Templates GitHub (issue/PR) | [`.github/ISSUE_TEMPLATE/`](../.github/ISSUE_TEMPLATE/) · [PR template](../.github/pull_request_template.md) | Formulários ao criar issue (PBI / filho-tarefa) e corpo padrão de PR | Quando o padrão de descrição mudar |
 | EAP | [EAP.jpeg](EAP.jpeg) | Estrutura Analítica do Projeto que originou o cronograma | Quando o escopo for decomposto de forma diferente |
+| Orçamento | [ORCAMENTO_30_ITENS.md](ORCAMENTO_30_ITENS.md) | Estimativa de 30 itens, premissas e totais | Quando houver cotação, compra ou mudança de escopo |
+| Qualidade | [ANALISE_QUALIDADE_7_FERRAMENTAS.md](ANALISE_QUALIDADE_7_FERRAMENTAS.md) | Aplicação das sete ferramentas de qualidade | A cada ciclo de testes e homologação |
+| Organograma e RACI | [ORGANOGRAMA_RACI.md](ORGANOGRAMA_RACI.md) | Estrutura e responsabilidades do projeto | Quando papéis ou escopo mudarem |
+| Comunicação | [PLANO_COMUNICACAO.md](PLANO_COMUNICACAO.md) | Públicos, ritos, canais e registros | A cada sprint |
+| Riscos | [RISCOS.md](RISCOS.md) | Registro, avaliação e respostas aos riscos | Semanalmente e após incidentes |
+| Aquisições | [AQUISICOES.md](AQUISICOES.md) | Recursos, serviços e aprovações de compra | Antes de cada aquisição |
+| Poder/interesse | [MATRIZ_PODER_INTERESSE.md](MATRIZ_PODER_INTERESSE.md) | Estratégia de engajamento dos stakeholders | Quando stakeholders mudarem |
 
 ![EAP — Estrutura Analítica do Projeto](EAP.jpeg)
 
@@ -27,14 +34,10 @@ Artefatos de gerenciamento do projeto (base PMBOK), mantidos diretamente neste r
 
 Marcos completos e tabela de atividades: [CRONOGRAMA.md](CRONOGRAMA.md#4-marcos-do-projeto-resumo).
 
-## O que ainda falta nesta pasta (próximos artefatos sugeridos)
+## Próximos artefatos sugeridos
 
-Em ordem de valor para o projeto — crie o arquivo só quando houver conteúdo real, não como placeholder vazio:
-
-1. **`RISCOS.md`** — registro de riscos vivo. O TAP já lista 3 riscos principais (atraso, contrato de API inconsistente, perda/duplicidade na sincronização offline); falta probabilidade, impacto, dono e plano de resposta para cada um.
-2. **`STATUS.md`** (ou ata semanal) — acompanhamento por sprint: previsto × realizado, desvios do cronograma e decisões da semana. É a evidência do controle do cronograma (6.7).
-3. **Fonte editável da EAP** — hoje a EAP é só uma imagem (`EAP.jpeg`). Guarde também a fonte (Mermaid, draw.io, planilha) para poder alterar sem redesenhar.
-4. **Plano de comunicação / matriz de responsabilidades (RACI)** — quem aprova o quê entre GP, PO, devs e sponsor.
+1. **`STATUS.md`** (ou ata semanal) — acompanhamento por sprint: previsto × realizado, desvios do cronograma e decisões da semana. É a evidência do controle do cronograma (6.7).
+2. **Fonte editável da EAP** — hoje a EAP é só uma imagem (`EAP.jpeg`). Guarde também a fonte (Mermaid, draw.io ou planilha) para poder alterar sem redesenhar.
 
 ## Convenções
 
