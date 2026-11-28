@@ -1,4 +1,4 @@
-# Termo de Abertura de Projeto — Field Core
+# Termo de Abertura de Projeto — FieldCore
 
 **Desenvolvimento e implantação da plataforma FieldCore — Sistema de Inspeção Técnica em Campo**
 
@@ -39,7 +39,7 @@ Isto resultará em:
 Desenvolvimento de uma plataforma composta por três aplicações integradas:
 
 - **Aplicativo mobile** (Expo/React Native)
-- **Interface administrativa web** (Angular)
+- **Interface administrativa web** (Next.js)
 - **API REST** (Java/Spring Boot)
 
 Que permitem planejar, executar e revisar inspeções técnicas em campo, inclusive em locais sem conectividade com a internet, com sincronização confiável e idempotente ao retorno da conexão.
@@ -88,7 +88,7 @@ Professores responsáveis pelas disciplinas de Expo, Spring Boot e Interface Web
 
 ## Gerente do Projeto
 
-A definir pela equipe (revezamento por sprint) — integrantes:
+Exercida em revezamento por sprint entre os integrantes da equipe:
 
 - Giovana Rafaela
 - Gustavo Sousa

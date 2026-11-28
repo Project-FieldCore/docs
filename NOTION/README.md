@@ -1,7 +1,7 @@
 # Especificação do Produto — FieldOps (export do Notion)
 
 Especificação completa do produto exportada do Notion: visão, requisitos, arquitetura, backlog e critérios de qualidade.
-Ponto de entrada do repositório: [`../README.md`](../README.md) · Gestão do projeto: [`../PROJECT_MANAGEMENT/`](../PROJECT_MANAGEMENT/README.md)
+Ponto de entrada do repositório: [`../README.md`](../README.md) · Gestão do projeto: [`../PROJECT_MANAGEMENT/`](../PROJECT_MANAGEMENT/)
 
 📺 **Vídeo do projeto:** https://youtu.be/4UAVJdNgx-s
 

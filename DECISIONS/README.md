@@ -13,7 +13,7 @@ Decisões relevantes de arquitetura, stack e escopo — registradas **quando sã
 
 1. **Nome canônico: FieldOps × FieldCore** — adotado provisoriamente no [README raiz](../README.md): produto = FieldOps, organização = FieldCore; repos com nomes curtos em inglês.
 2. ~~**Frontend web: Angular × Next.js**~~ — **resolvido** na ADR 0002 (Next.js oficial para o MVP); falta reexport/atualização das páginas Notion 11/14 e do TAP.
-3. ~~**Repositório `fieldcore_cloud`**~~ — **resolvido:** repositório removido; nomes padronizados em `api-java` / `web-react` / `mobile-react` / `docs` (ver [REPO_RENAME_GUIDE.md](../PROJECT_MANAGEMENT/REPO_RENAME_GUIDE.md)).
+3. ~~**Repositório `fieldcore_cloud`**~~ — **resolvido:** repositório removido; nomes padronizados em `api-java` / `web-react` / `mobile-react` / `docs` (ver [REPO_RENAME_GUIDE.md](../RULES/REPO_RENAME_GUIDE.md)).
 
 ## Como registrar uma decisão
 

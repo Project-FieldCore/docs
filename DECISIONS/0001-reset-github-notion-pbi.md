@@ -22,8 +22,8 @@ Apagar os 8 Projects, as 327 issues e os 39 milestones; manter branches,
 pull requests, commits e o código. O backlog passa a ser criado **somente**
 a partir dos PBIs do Notion (doc. 15), um Project canônico da organização,
 issues nos repositórios dos componentes com sub-issues por componente —
-convenção em [PROJECT_MANAGEMENT/BRANCH_COMMIT_CONVENTION.md](../PROJECT_MANAGEMENT/BRANCH_COMMIT_CONVENTION.md)
-e planejamento em [PROJECT_MANAGEMENT/SPRINT_PLANNING.md](../PROJECT_MANAGEMENT/SPRINT_PLANNING.md).
+convenção em [RULES/BRANCH_COMMIT_CONVENTION.md](../RULES/BRANCH_COMMIT_CONVENTION.md)
+e planejamento em [RULES/SPRINT_PLANNING.md](../RULES/SPRINT_PLANNING.md).
 
 Antes da exclusão foi exportado backup integral (issues com corpo/labels/
 milestones/comentários, itens e campos dos 8 boards) para

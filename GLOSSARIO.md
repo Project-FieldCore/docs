@@ -18,11 +18,11 @@ Termos do domínio usados na especificação ([`NOTION/`](NOTION/README.md)), no
 | **Outbox** | Fila local de operações pendentes de envio no app. Preserva os dados mesmo se o app for fechado antes de sincronizar. |
 | **Idempotência** | Propriedade de uma operação que pode ser repetida (ex.: reenvio após falha de rede) sem duplicar dados no servidor. Requisito central da sincronização. |
 | **Revisão** | Etapa em que o supervisor aprova ou reprova uma inspeção sincronizada, com base em respostas e evidências. Reprovação pode gerar correção pelo técnico. |
-| **MVP** | Escopo mínimo do produto para a primeira entrega — definido no [Backlog](NOTION/pages/15%20-%20Backlog%20do%20Produto%20add3130b4ab783848042818065d5e111.md) e protegido pelo [TAP](PROJECT_MANAGEMENT/TAP.md) (mudanças só com o sponsor). |
+| **MVP** | Escopo mínimo do produto para a primeira entrega — definido no [Backlog](NOTION/pages/15%20-%20Backlog%20do%20Produto%20add3130b4ab783848042818065d5e111.md) e protegido pelo [TAP](PROJECT_MANAGEMENT/FILES/01%20-%20Termo%20de%20Abertura%20de%20Projeto%20-%20FieldCore.md) (mudanças só com o sponsor). |
 | **Definition of Done (DoD)** | Critérios que definem quando uma entrega está pronta — ver [18 - DoD](NOTION/pages/18%20-%20Defini%C3%A7%C3%A3o%20de%20Pronto%20-%20Definition%20of%20Done%2027d3130b4ab7839c917f816f80bc8201.md). |
-| **EAP** | Estrutura Analítica do Projeto: decomposição do escopo em pacotes de trabalho; base do cronograma. Ver [`PROJECT_MANAGEMENT/EAP.jpeg`](PROJECT_MANAGEMENT/EAP.jpeg). |
-| **TAP** | Termo de Abertura do Projeto: documento que autoriza formalmente o projeto. Ver [`PROJECT_MANAGEMENT/TAP.md`](PROJECT_MANAGEMENT/TAP.md). |
-| **Marco (milestone)** | Ponto de controle de duração zero no cronograma (ex.: 7.5 — Sistema integrado). Lista completa no [Cronograma](PROJECT_MANAGEMENT/CRONOGRAMA.md#4-marcos-do-projeto-resumo). |
+| **EAP** | Estrutura Analítica do Projeto: decomposição do escopo em pacotes de trabalho; base do cronograma. Ver [02 - Estrutura Analítica de Projeto](PROJECT_MANAGEMENT/FILES/02%20-%20Estrutura%20Anal%C3%ADtica%20de%20Projeto%20-%20FieldCore.jpeg). |
+| **TAP** | Termo de Abertura do Projeto: documento que autoriza formalmente o projeto. Ver [01 - Termo de Abertura de Projeto](PROJECT_MANAGEMENT/FILES/01%20-%20Termo%20de%20Abertura%20de%20Projeto%20-%20FieldCore.md). |
+| **Marco (milestone)** | Ponto de controle de duração zero no cronograma (ex.: 7.5 — Sistema integrado). Lista completa no [Cronograma](PROJECT_MANAGEMENT/FILES/03%20-%20Cronograma%20do%20Projeto%20-%20FieldCore.md#4-marcos-do-projeto-resumo). |
 | **Caminho crítico** | Sequência de atividades que determina a data final do projeto; atrasos nele atrasam a entrega. No FieldOps: Infra → Backend → Integração → Testes → Homologação → Implantação. |
 
 > Faltou um termo ou a definição diverge de uma RN? Corrija a fonte (Notion ou RN correspondente) e ajuste aqui — o glossário reflete a especificação, não a substitui.
